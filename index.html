@@ -1,142 +1,172 @@
 <!DOCTYPE html>
 <html lang="pl">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>CV - Jakub</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                color: #333;
-                background-color: #f4f4f4;
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Jakub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            margin: 1em;
+            padding: 1em;
+            background-color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #222;
+            color: white;
+        }
+
+        li {
+            line-height: 1.5;
+        }
+
+        #dark-mode-toggle {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #555;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #dark-mode-toggle:hover {
+            background-color: #707070;
+        }
+
+        .dark-mode #dark-mode-toggle {
+            color: #222;
+            background-color: #ddd;
+        }
+
+        .dark-mode {
+            background-color: #222222;
+            color: #f4f4f4;
+        }
+
+        .dark-mode header {
+            background-color: #111111;
+            color: white;
+        }
+
+        .dark-mode section {
+            background-color: #4b4a4a;
+            color: #f4f4f4;
+        }
+
+        .dark-mode footer {
+            background-color: #111111;
+            color: white;
+        }
+
+        #current-date {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+            #current-date {
+                font-size: 20px;
+                margin: 20px 0;
             }
+        }
+    </style>
+</head>
 
-            header {
-                background-color: #222;
-                color: white;
-                text-align: center;
-                padding: 1em 0;
-            }
+<body>
+<header>
+    <h1>Jakub</h1>
+    <p>Software Developer</p>
+    <button id="dark-mode-toggle">Tryb Ciemny</button>
+</header>
+<section id="about-me">
+    <h2>O mnie</h2>
+    <p>Jestem programistą z prawie rocznym doświadczeniem zawodowym. Specjalizuję się w tworzeniu nowoczesnych
+        aplikacji internetowych z wykorzystaniem JavaScript i Angulara. Jestem gotowy do nauki nowych
+        technologii i nieustannie dążę do rozwoju moich umiejętności zawodowych.</p>
+</section>
+<section id="experience">
+    <h2>Doświadczenie</h2>
+    <ul>
+        <li>2023 - obecnie, <strong>Junior Software Developer</strong></li>
+    </ul>
+</section>
+<section id="education">
+    <h2>Wykształcenie</h2>
+    <ul>
+        <li>2021 - obecnie, <strong>Uniwerystet WSB Merito Warszawa</strong> - Informatyka, Front-end Developer
+        </li>
+        <li>2017 - 2021, <strong>Technikum Informatyczne</strong></li>
+    </ul>
+</section>
+<section id="skills">
+    <h2>Umiejętności</h2>
+    <ul>
+        <li>Znajomość JavaScript</li>
+        <li>Doświadczenie w pracy z frameworkiem Angular</li>
+        <li>Znajomość HTML5 i CSS</li>
+        <li>Tworzenie responsywnych stron internetowych</li>
+        <li>Doświadczenie w pracy z REST API</li>
+        <li>Znajomość Git</li>
+        <li>Kreatywność i umiejętność rozwiązywania problemów</li>
+    </ul>
+</section>
+<section id="languages">
+    <h2>Znajomość języków</h2>
+    <ul>
+        <li><strong>angielski,</strong> poziom średnio zaawansowany</li>
+    </ul>
+</section>
+<div id="current-date"></div>
+<footer>
+    <p>Kontakt: jakub@gmail.com</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        const currentDateDiv = document.getElementById('current-date');
 
-            section {
-                margin: 1em;
-                padding: 1em;
-                background-color: white;
-            }
+        darkModeToggle.addEventListener('click', function () {
+            body.classList.toggle('dark-mode');
+        });
 
-            footer {
-                text-align: center;
-                padding: 1em 0;
-                background-color: #222;
-                color: white;
-            }
 
-            li {
-                line-height: 1.5;
-            }
-
-            #dark-mode-toggle {
-                padding: 10px 15px;
-                font-size: 16px;
-                color: #fff;
-                background-color: #555;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s, color 0.3s;
-            }
-
-            #dark-mode-toggle:hover {
-                background-color: #707070;
-            }
-
-            .dark-mode #dark-mode-toggle {
-                color: #222;
-                background-color: #ddd;
-            }
-
-            .dark-mode {
-                background-color: #222222;
-                color: #f4f4f4;
-            }
-
-            .dark-mode header {
-                background-color: #111111;
-                color: white;
-            }
-
-            .dark-mode section {
-                background-color: #4b4a4a;
-                color: #f4f4f4;
-            }
-
-            .dark-mode footer {
-                background-color: #111111;
-                color: white;
-            }
-        </style>
-    </head>
-
-    <body>
-        <header>
-            <h1>Jakub</h1>
-            <p>Software Developer</p>
-            <button id="dark-mode-toggle">Tryb Ciemny</button>
-        </header>
-        <section id="about-me">
-            <h2>O mnie</h2>
-            <p>Jestem programistą z prawie rocznym doświadczeniem zawodowym. Specjalizuję się w tworzeniu nowoczesnych
-                aplikacji internetowych z wykorzystaniem JavaScript i Angulara. Jestem gotowy do nauki nowych
-                technologii i nieustannie dążę do rozwoju moich umiejętności zawodowych.</p>
-        </section>
-        <section id="experience">
-            <h2>Doświadczenie</h2>
-            <ul>
-                <li>2023 - obecnie, <strong>Junior Software Developer</strong></li>
-            </ul>
-        </section>
-        <section id="education">
-            <h2>Wykształcenie</h2>
-            <ul>
-                <li>2021 - obecnie, <strong>Uniwerystet WSB Merito Warszawa</strong> - Informatyka, Front-end Developer
-                </li>
-                <li>2017 - 2021, <strong>Technikum Informatyczne</strong></li>
-            </ul>
-        </section>
-        <section id="skills">
-            <h2>Umiejętności</h2>
-            <ul>
-                <li>Znajomość JavaScript</li>
-                <li>Doświadczenie w pracy z frameworkiem Angular</li>
-                <li>Znajomość HTML5 i CSS</li>
-                <li>Tworzenie responsywnych stron internetowych</li>
-                <li>Doświadczenie w pracy z REST API</li>
-                <li>Znajomość Git</li>
-                <li>Kreatywność i umiejętność rozwiązywania problemów</li>
-            </ul>
-        </section>
-        <section id="languages">
-            <h2>Znajomość języków</h2>
-            <ul>
-                <li><strong>angielski,</strong> poziom średnio zaawansowany</li>
-            </ul>
-        </section>
-        <footer>
-            <p>Kontakt: jakub@gmail.com</p>
-        </footer>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const darkModeToggle = document.getElementById('dark-mode-toggle');
-                const body = document.body;
-
-                darkModeToggle.addEventListener('click', function () {
-                    body.classList.toggle('dark-mode');
-                });
+        function updateDate() {
+            const now = new Date();
+            const formattedDate = now.toLocaleDateString('pl-PL', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                weekday: 'long'
             });
+            currentDateDiv.textContent = `Dzisiaj jest: ${formattedDate}`;
+        }
 
-        </script>
-    </body>
+        updateDate();
+    });
+</script>
+</body>
 
 </html>
